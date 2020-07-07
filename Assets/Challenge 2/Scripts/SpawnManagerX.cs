@@ -19,6 +19,8 @@ public class SpawnManagerX : MonoBehaviour
         
         Invoke("SpawnRandomBall", startDelay);
         Debug.Log(startDelay + "Timing");
+
+     
     }
 
     // Spawn random ball at random x position at top of play area
@@ -26,7 +28,8 @@ public class SpawnManagerX : MonoBehaviour
     {
         //To randomly drop the ball anywhere from 3sec-5sec
         int spawnInterval = Random.Range(1, 5);
-       
+
+        Invoke("SpawnRandomBall", spawnInterval);
 
 
         int ballIndex = Random.Range(0, ballPrefabs.Length);
